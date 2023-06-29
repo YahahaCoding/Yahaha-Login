@@ -1,0 +1,19 @@
+server:
+    port: 9991
+
+spring:
+    application:
+        name: signin-server
+    cloud:
+        nacos:
+            discovery:
+                server-addr: http://43.139.118.17:8848
+                namespace: 9047add0-deee-4b4e-912f-220a53d31165
+            config:
+                server-addr: http://43.139.118.17:8848
+                file-extension: yml
+                namespace: 9047add0-deee-4b4e-912f-220a53d31165
+                group: SERVER
+                shared-configs:
+                    - data-id: server-common-config.yml
+                      group: COMMON
